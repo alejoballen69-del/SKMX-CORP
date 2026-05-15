@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skandia México — Propuesta Estratégica Maestra · Beneficios Corporativos 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.30.0/tabler-icons.min.css">
+<style>
+:root {
+  --sk-green: #00C73D;
+  --sk-dark: #404040;
+  --sk-teal: #52FFD9;
+  --sk-mint: #45E39E;
+  --sk-lime: #8FE000;
+  --sk-dkgreen: #45AD00;
+  --sk-cyan: #00F0E0;
+  --sk-amber: #FFAE08;
+  --font: 'Montserrat', Verdana, sans-serif;
+  --white: #ffffff;
+  --off: #f7f7f5;
+  --light: #f0f0ec;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font); background: var(--off); color: var(--sk-dark); line-height: 1; overflow-x: hidden; }
+::selection { background: var(--sk-green); color: #fff; }
+
+/* ── PRINT ── */
+@media print {
+  .nav, .hero-right { display: none; }
+  .hero { min-height: auto; grid-template-columns: 1fr; }
+  section { page-break-inside: avoid; }
+}
+
+/* ── NAV ── */
+.nav {
+  position: sticky; top: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 14px 48px; background: #fff;
+  border-bottom: 3px solid var(--sk-green);
+}
+.nav-logo { font-size: 11px; font-weight: 900; letter-spacing: .2em; color: var(--sk-dark); flex-shrink: 0; }
+.nav-logo span { color: var(--sk-green); }
+.nav-links { display: flex; gap: 4px; flex-wrap: wrap; }
+.nav-link {
+  font-family: var(--font); font-size: 9px; font-weight: 700; letter-spacing: .12em;
+  padding: 5px 11px; border: 1.5px solid var(--sk-dark); background: transparent;
+  color: var(--sk-dark); cursor: pointer; transition: .18s; border-radius: 0; text-decoration: none; display: inline-block;
+}
+.nav-link:hover, .nav-link.active { background: var(--sk-green); border-color: var(--sk-green); color: #fff; }
+.nav-conf { font-size: 9px; font-weight: 700; letter-spacing: .12em; padding: 5px 12px; background: var(--sk-amber); color: var(--sk-dark); flex-shrink: 0; }
+
+/* ── HERO ── */
+.hero {
+  display: grid; grid-template-columns: 1fr 1fr; min-height: 90vh;
+  background: #fff;
+}
+.hero-left { padding: 64px 48px 64px 64px; display: flex; flex-direction: column; justify-content: center; }
+.hero-eyebrow {
+  font-size: 10px; font-weight: 700; letter-spacing: .22em; color: var(--sk-green);
+  margin-bottom: 24px; display: flex; align-items: center; gap: 10px;
+}
+.hero-eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: var(--sk-green); flex-shrink: 0; }
+.hero-h1 {
+  font-size: clamp(52px, 7.5vw, 96px); font-weight: 900; line-height: .91;
+  letter-spacing: -.04em; margin-bottom: 28px;
+}
+.hero-h1 .green { color: var(--sk-green); }
+.hero-h1 .outline { -webkit-text-stroke: 2.5px var(--sk-dark); color: transparent; }
+.hero-sub {
+  font-size: 12.5px; font-weight: 300; line-height: 1.75; color: #777;
+  max-width: 380px; margin-bottom: 36px;
+}
+.hero-cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--sk-green); color: #fff; font-family: var(--font);
+  font-weight: 700; font-size: 11px; letter-spacing: .14em;
+  padding: 15px 30px; border: none; cursor: pointer; transition: .18s;
+  text-decoration: none; align-self: flex-start;
+}
+.hero-cta:hover { background: var(--sk-dkgreen); }
+.hero-stats { display: flex; gap: 28px; margin-top: 48px; }
+.stat { border-left: 3px solid var(--sk-green); padding-left: 14px; }
+.stat-num { font-size: 26px; font-weight: 900; color: var(--sk-dark); line-height: 1; }
+.stat-label { font-size: 8px; font-weight: 700; letter-spacing: .14em; color: #aaa; margin-top: 4px; }
+
+/* HERO RIGHT */
+.hero-right {
+  background: var(--sk-dark); position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-bg-grid {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+.hero-tag {
+  position: absolute; top: 24px; left: 50%; transform: translateX(-50%);
+  background: var(--sk-teal); font-size: 8.5px; font-weight: 700; letter-spacing: .18em;
+  padding: 5px 16px; color: var(--sk-dark); white-space: nowrap;
+}
+.statue-area { position: relative; width: 280px; height: 420px; }
+.statue-svg { width: 100%; height: 100%; }
+.pop-card {
+  position: absolute; padding: 12px 16px; animation: float 3.2s ease-in-out infinite;
+}
+.pop-card-1 { top: 8%; right: -20px; background: var(--sk-green); animation-delay: 0s; }
+.pop-card-2 { top: 52%; left: -30px; background: var(--sk-dark); border: 2px solid var(--sk-green); animation-delay: 1.1s; }
+.pop-card-3 { bottom: 12%; right: -10px; background: var(--sk-amber); animation-delay: .55s; }
+.pop-num { font-size: 22px; font-weight: 900; line-height: 1; color: #fff; }
+.pop-card-3 .pop-num { color: var(--sk-dark); }
+.pop-card-2 .pop-num { color: var(--sk-green); }
+.pop-label { font-size: 7.5px; font-weight: 700; letter-spacing: .1em; color: rgba(255,255,255,.8); margin-top: 2px; }
+.pop-card-3 .pop-label { color: rgba(64,64,64,.8); }
+.pop-bubble {
+  position: absolute; bottom: 0; left: -40px;
+  background: var(--sk-green); color: #fff;
+  font-size: 8px; font-weight: 900; letter-spacing: .12em; padding: 7px 14px;
+}
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+
+/* ── DIVIDERS ── */
+.div-green { height: 4px; background: var(--sk-green); }
+.div-dark { height: 4px; background: var(--sk-dark); }
+.div-amber { height: 4px; background: var(--sk-amber); }
+
+/* ── SECTIONS ── */
+.section { padding: 84px 64px; }
+.section-white { background: #fff; }
+.section-off { background: var(--off); }
+.section-dark { background: var(--sk-dark); color: #fff; }
+.section-green { background: var(--sk-green); }
+.section-label {
+  font-size: 9px; font-weight: 700; letter-spacing: .22em; color: var(--sk-green);
+  margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+}
+.section-dark .section-label { color: var(--sk-teal); }
+.section-green .section-label { color: rgba(255,255,255,.65); }
+.section-label::before { content: ''; display: block; width: 22px; height: 2px; background: currentColor; flex-shrink: 0; }
+.section-h2 {
+  font-size: clamp(36px, 5.5vw, 70px); font-weight: 900; line-height: .93;
+  letter-spacing: -.04em; margin-bottom: 22px;
+}
+.section-h3 { font-size: clamp(22px, 3vw, 36px); font-weight: 900; line-height: 1.05; letter-spacing: -.02em; margin-bottom: 14px; }
+.section-body { font-size: 13px; font-weight: 300; line-height: 1.78; color: #666; max-width: 660px; margin-bottom: 36px; }
+.section-dark .section-body { color: rgba(255,255,255,.55); }
+.section-green .section-h2, .section-green .section-body { color: #fff; }
+.green-accent { color: var(--sk-green); }
+.section-dark .green-accent { color: var(--sk-green); }
+.outline-d { -webkit-text-stroke: 2px var(--sk-dark); color: transparent; }
+.outline-w { -webkit-text-stroke: 2.5px #fff; color: transparent; }
+
+/* ── DIAGNOSIS ── */
+.diag-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin: 36px 0; }
+.diag-cell { padding: 32px 28px; }
+.dc-light { background: var(--light); }
+.dc-dark { background: var(--sk-dark); color: #fff; }
+.dc-green { background: var(--sk-green); color: #fff; }
+.dc-off { background: var(--off); }
+.diag-num { font-size: 52px; font-weight: 900; line-height: 1; letter-spacing: -.04em; margin-bottom: 8px; }
+.dc-dark .diag-num { color: var(--sk-green); }
+.dc-green .diag-num, .dc-green .diag-title { color: #fff; }
+.dc-light .diag-num, .dc-off .diag-num { color: var(--sk-dark); }
+.diag-title { font-size: 9px; font-weight: 700; letter-spacing: .14em; margin-bottom: 10px; opacity: .55; }
+.dc-dark .diag-title { opacity: .5; color: #fff; }
+.diag-body { font-size: 12px; font-weight: 300; line-height: 1.65; opacity: .75; }
+.dc-dark .diag-body { color: rgba(255,255,255,.65); opacity: 1; }
+
+/* ── LEAKAGE ── */
+.leakage-wrap { border: 2px solid var(--sk-dark); overflow: hidden; margin: 36px 0; }
+.l-row { display: grid; grid-template-columns: 2.2fr 1.2fr 1fr; border-bottom: 1px solid rgba(64,64,64,.1); }
+.l-row:last-child { border-bottom: none; }
+.l-header { background: var(--sk-dark); }
+.l-alt { background: var(--off); }
+.l-total { background: var(--sk-dark); }
+.l-cell { padding: 14px 20px; font-size: 11.5px; font-weight: 600; letter-spacing: .03em; color: var(--sk-dark); vertical-align: middle; }
+.l-header .l-cell { color: #fff; font-size: 9px; font-weight: 700; letter-spacing: .15em; }
+.l-val { color: var(--sk-green); font-weight: 900; font-size: 14px; }
+.l-total .l-cell { color: #fff; }
+.l-total .l-val { color: var(--sk-amber); font-size: 20px; }
+
+/* ── CALLOUT ── */
+.callout {
+  padding: 28px 36px; margin: 32px 0; position: relative; overflow: hidden;
+  display: flex; align-items: flex-start; gap: 20px;
+}
+.callout-green { background: var(--sk-green); }
+.callout-dark { background: var(--sk-dark); }
+.callout-amber { background: rgba(255,174,8,.15); border-left: 4px solid var(--sk-amber); }
+.callout-text { font-size: 14.5px; font-weight: 600; line-height: 1.55; color: #fff; }
+.callout-amber .callout-text { color: var(--sk-dark); }
+.callout-icon { font-size: 28px; color: rgba(255,255,255,.25); flex-shrink: 0; margin-top: 2px; }
+.callout-amber .callout-icon { color: var(--sk-amber); }
+
+/* ── TIER CARDS ── */
+.tier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; margin: 44px 0; }
+.tier-card {
+  padding: 36px 28px; position: relative; overflow: hidden;
+  cursor: pointer; transition: transform .2s;
+}
+.tier-card:hover { transform: translateY(-5px); }
+.tc-core { background: var(--light); }
+.tc-growth { background: var(--sk-dark); color: #fff; }
+.tc-strategic { background: var(--sk-green); }
+.tier-badge {
+  font-size: 8px; font-weight: 900; letter-spacing: .18em;
+  padding: 4px 10px; display: inline-block; margin-bottom: 22px;
+}
+.tc-core .tier-badge { background: var(--sk-dark); color: #fff; }
+.tc-growth .tier-badge { background: var(--sk-green); color: #fff; }
+.tc-strategic .tier-badge { background: #fff; color: var(--sk-green); }
+.tier-bp { font-size: 58px; font-weight: 900; line-height: 1; letter-spacing: -.05em; margin-bottom: 6px; }
+.tc-core .tier-bp { color: var(--sk-dark); }
+.tc-growth .tier-bp { color: var(--sk-green); }
+.tc-strategic .tier-bp { color: #fff; }
+.tier-unit { font-size: 16px; font-weight: 700; vertical-align: super; }
+.tier-name { font-size: 9px; font-weight: 700; letter-spacing: .1em; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid currentColor; opacity: .6; }
+.tc-strategic .tier-name { opacity: 1; border-color: rgba(255,255,255,.5); }
+.tier-promise { font-size: 12px; font-weight: 300; line-height: 1.65; margin-bottom: 22px; opacity: .75; }
+.tc-strategic .tier-promise { color: #fff; opacity: .92; }
+.tc-growth .tier-promise { color: rgba(255,255,255,.7); opacity: 1; }
+.tier-features { list-style: none; font-size: 11px; font-weight: 600; letter-spacing: .04em; }
+.tier-features li { padding: 7px 0; border-bottom: 1px solid rgba(0,0,0,.07); display: flex; align-items: flex-start; gap: 8px; line-height: 1.45; }
+.tc-growth .tier-features li, .tc-strategic .tier-features li { border-color: rgba(255,255,255,.12); }
+.tier-features li::before { content: '—'; font-weight: 900; font-size: 10px; color: var(--sk-green); flex-shrink: 0; margin-top: 1px; }
+.tc-strategic .tier-features li::before { content: '✓'; color: #fff; }
+.tier-margin { position: absolute; bottom: 18px; right: 22px; font-size: 9px; font-weight: 700; letter-spacing: .12em; opacity: .35; }
+.tier-rec {
+  position: absolute; top: 16px; right: 20px;
+  background: var(--sk-mint); color: var(--sk-dark);
+  font-size: 7.5px; font-weight: 900; letter-spacing: .12em; padding: 4px 9px;
+}
+.tier-pop {
+  position: absolute; top: -8px; right: -8px; width: 60px; height: 60px;
+  background: var(--sk-amber); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 7.5px; font-weight: 900; letter-spacing: .06em; color: var(--sk-dark);
+  text-align: center; line-height: 1.25;
+}
+
+/* ── TWO-COL ── */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin: 32px 0; }
+.panel { padding: 28px 28px; }
+.panel-light { background: var(--light); }
+.panel-green-tint { background: rgba(0,199,61,.09); border-left: 4px solid var(--sk-green); }
+.panel-dark { background: rgba(255,255,255,.04); border-left: 4px solid rgba(255,255,255,.12); }
+.panel-green-solid { background: rgba(0,199,61,.14); border-left: 4px solid var(--sk-green); }
+.panel-label { font-size: 8.5px; font-weight: 700; letter-spacing: .18em; color: var(--sk-green); margin-bottom: 10px; }
+.panel-dark .panel-label { color: rgba(255,255,255,.35); }
+.panel-h { font-size: 16px; font-weight: 900; margin-bottom: 10px; }
+.panel-dark .panel-h, .panel-green-solid .panel-h { color: #fff; }
+.panel-body { font-size: 12px; font-weight: 300; line-height: 1.7; color: #666; }
+.panel-dark .panel-body { color: rgba(255,255,255,.55); }
+.panel-green-solid .panel-body { color: rgba(255,255,255,.75); }
+
+/* ── MOMENTS ── */
+.moment-header-row {
+  display: grid; grid-template-columns: 190px 1fr 1fr 1fr; gap: 2px; margin-bottom: 2px;
+}
+.mh { padding: 8px 14px; font-size: 8.5px; font-weight: 700; letter-spacing: .14em; }
+.mh-core { background: rgba(255,255,255,.08); color: rgba(255,255,255,.4); }
+.mh-growth { background: var(--sk-dkgreen); color: #fff; }
+.mh-strategic { background: rgba(0,199,61,.15); color: var(--sk-green); }
+.moment-row { display: grid; grid-template-columns: 190px 1fr 1fr 1fr; gap: 2px; margin-bottom: 2px; }
+.m-label {
+  padding: 13px 14px; background: rgba(255,255,255,.06);
+  font-size: 11px; font-weight: 700; color: #fff;
+  display: flex; align-items: center; gap: 8px;
+}
+.m-label i { color: var(--sk-green); font-size: 14px; flex-shrink: 0; }
+.m-core { padding: 13px 14px; background: rgba(255,255,255,.03); font-size: 11px; font-weight: 300; color: rgba(255,255,255,.5); line-height: 1.5; }
+.m-growth { padding: 13px 14px; background: rgba(0,199,61,.08); font-size: 11px; font-weight: 400; color: rgba(255,255,255,.75); line-height: 1.5; }
+.m-strategic { padding: 13px 14px; background: var(--sk-green); font-size: 11px; font-weight: 600; color: #fff; line-height: 1.5; }
+
+/* ── NARRATIVE ── */
+.narrative-block {
+  background: var(--sk-dark); padding: 64px; margin: 44px 0;
+  position: relative; overflow: hidden;
+}
+.narrative-block::before {
+  content: '\201C'; position: absolute; top: -30px; left: 28px;
+  font-size: 280px; font-weight: 900; color: var(--sk-green); opacity: .1;
+  line-height: 1; pointer-events: none; font-family: var(--font);
+}
+.narrative-text {
+  font-size: clamp(17px, 2.2vw, 26px); font-weight: 300; line-height: 1.65;
+  color: #fff; position: relative; z-index: 2; max-width: 760px;
+}
+.narrative-text strong { font-weight: 900; color: var(--sk-green); }
+.narrative-author { margin-top: 32px; font-size: 8.5px; font-weight: 700; letter-spacing: .2em; color: rgba(255,255,255,.3); }
+
+/* ── AUDIENCE ── */
+.audience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin: 36px 0; }
+.aud-card { padding: 28px 26px; background: #fff; border-left: 4px solid var(--sk-green); }
+.aud-card.alt { background: var(--off); }
+.aud-icon { font-size: 26px; color: var(--sk-green); margin-bottom: 12px; display: block; }
+.aud-title { font-size: 12px; font-weight: 900; letter-spacing: .08em; margin-bottom: 4px; }
+.aud-role { font-size: 8.5px; font-weight: 700; letter-spacing: .15em; color: var(--sk-green); margin-bottom: 12px; }
+.aud-body { font-size: 12px; font-weight: 300; line-height: 1.7; color: #666; font-style: italic; }
+
+/* ── JARGON ── */
+.jargon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 32px 0; }
+.j-old { padding: 13px 18px; background: var(--light); font-size: 11px; font-weight: 600; color: #999; font-style: italic; border-left: 3px solid #ccc; }
+.j-new { padding: 13px 18px; background: var(--sk-dark); font-size: 11px; font-weight: 700; color: #fff; border-left: 3px solid var(--sk-green); display: flex; align-items: center; gap: 8px; }
+.j-new i { color: var(--sk-green); font-size: 13px; flex-shrink: 0; }
+
+/* ── VALIDATION TIMELINE ── */
+.timeline { display: flex; gap: 3px; margin: 36px 0; }
+.tl-step { flex: 1; padding: 26px 20px; background: rgba(255,255,255,.04); position: relative; }
+.tl-active { background: var(--sk-green); }
+.tl-num { font-size: 8.5px; font-weight: 700; letter-spacing: .18em; color: var(--sk-green); margin-bottom: 10px; }
+.tl-active .tl-num { color: rgba(255,255,255,.65); }
+.tl-title { font-size: 13px; font-weight: 900; color: #fff; margin-bottom: 10px; line-height: 1.25; }
+.tl-body { font-size: 10.5px; font-weight: 300; line-height: 1.6; color: rgba(255,255,255,.5); }
+.tl-active .tl-body { color: rgba(255,255,255,.85); }
+.tl-gate { font-size: 9px; font-weight: 700; letter-spacing: .1em; color: var(--sk-green); margin-top: 14px; line-height: 1.4; }
+.tl-active .tl-gate { color: #fff; }
+
+/* ── FINANCIALS ── */
+.fin-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; margin: 36px 0; }
+.fin-card { padding: 30px 26px; background: var(--light); }
+.fin-highlight { background: var(--sk-dark); }
+.fin-horizon { font-size: 8.5px; font-weight: 700; letter-spacing: .18em; color: var(--sk-green); margin-bottom: 10px; }
+.fin-highlight .fin-horizon { color: var(--sk-teal); }
+.fin-amount { font-size: 38px; font-weight: 900; letter-spacing: -.04em; line-height: 1; margin-bottom: 8px; color: var(--sk-dark); }
+.fin-highlight .fin-amount { color: var(--sk-green); }
+.fin-desc { font-size: 11px; font-weight: 300; line-height: 1.65; color: #777; }
+.fin-highlight .fin-desc { color: rgba(255,255,255,.5); }
+
+/* ── CLOSING ── */
+.closing {
+  background: var(--sk-green); padding: 84px 64px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
+}
+.closing-h { font-size: clamp(40px, 5.5vw, 72px); font-weight: 900; line-height: .92; letter-spacing: -.04em; color: #fff; margin-bottom: 32px; }
+.closing-checks { list-style: none; }
+.closing-checks li {
+  font-size: 12px; font-weight: 400; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.2);
+  display: flex; gap: 12px; color: #fff; line-height: 1.55;
+}
+.closing-checks li i { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.closing-right { display: flex; flex-direction: column; gap: 14px; }
+.big-cta {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  background: #fff; color: var(--sk-green); font-family: var(--font);
+  font-weight: 900; font-size: 12px; letter-spacing: .14em;
+  padding: 20px 32px; border: none; cursor: pointer; width: 100%;
+  transition: .18s; text-decoration: none;
+}
+.big-cta:hover { background: var(--sk-dark); color: var(--sk-green); }
+.big-cta i { font-size: 18px; }
+.sec-cta {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  background: transparent; color: #fff; font-family: var(--font);
+  font-weight: 700; font-size: 11px; letter-spacing: .14em;
+  padding: 16px 32px; border: 2px solid #fff; cursor: pointer; width: 100%;
+  transition: .18s; text-decoration: none;
+}
+.sec-cta:hover { background: #fff; color: var(--sk-green); }
+.closing-fact { background: rgba(0,0,0,.18); padding: 22px 26px; }
+.closing-fact-num { font-size: 34px; font-weight: 900; color: #fff; line-height: 1; }
+.closing-fact-label { font-size: 9px; font-weight: 700; letter-spacing: .12em; color: rgba(255,255,255,.6); margin-top: 6px; }
+.closing-body { background: rgba(0,0,0,.15); padding: 26px 28px; }
+.closing-body-text { font-size: 13px; font-weight: 300; line-height: 1.75; color: rgba(255,255,255,.85); }
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--sk-dark); padding: 28px 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.footer-logo { font-size: 10px; font-weight: 900; letter-spacing: .2em; color: #fff; }
+.footer-logo span { color: var(--sk-green); }
+.footer-info { font-size: 8.5px; font-weight: 600; letter-spacing: .14em; color: rgba(255,255,255,.28); }
+.footer-conf { font-size: 8.5px; font-weight: 700; letter-spacing: .12em; padding: 4px 12px; border: 1px solid rgba(255,255,255,.2); color: rgba(255,255,255,.4); }
+
+/* ── PRICING PRINCIPLES ── */
+.principles-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; margin: 32px 0; }
+.principle { padding: 22px 18px; }
+.p-light { background: rgba(255,255,255,.05); border-top: 3px solid rgba(255,255,255,.15); }
+.p-green { background: rgba(255,255,255,.05); border-top: 3px solid var(--sk-green); }
+.p-amber { background: rgba(255,255,255,.05); border-top: 3px solid var(--sk-amber); }
+.p-num { font-size: 9px; font-weight: 700; letter-spacing: .18em; margin-bottom: 10px; }
+.p-green .p-num, .p-light .p-num { color: var(--sk-green); }
+.p-amber .p-num { color: var(--sk-amber); }
+.p-title { font-size: 12px; font-weight: 700; color: #fff; margin-bottom: 8px; line-height: 1.35; }
+.p-body { font-size: 10px; font-weight: 300; color: rgba(255,255,255,.45); line-height: 1.55; }
+
+/* ── FORMULA BOX ── */
+.formula-box { background: var(--sk-green); padding: 36px 44px; margin: 36px 0; }
+.formula-label { font-size: 9px; font-weight: 700; letter-spacing: .2em; color: rgba(255,255,255,.6); margin-bottom: 14px; }
+.formula-text { font-size: clamp(15px, 2vw, 22px); font-weight: 900; color: #fff; line-height: 1.4; }
+.formula-text span { font-weight: 300; font-size: .75em; opacity: .8; }
+
+/* ── BUYING MOTIVES ── */
+.motives-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin: 32px 0; }
+.motive { padding: 26px 26px; }
+.m-dark { background: rgba(255,255,255,.04); border-left: 4px solid rgba(255,255,255,.12); }
+.m-green { background: rgba(0,199,61,.1); border-left: 4px solid var(--sk-green); }
+.m-big { font-size: 38px; font-weight: 900; line-height: 1; margin-bottom: 10px; }
+.m-dark .m-big { color: rgba(255,255,255,.25); }
+.m-green .m-big { color: var(--sk-green); }
+.m-title { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.m-body { font-size: 11px; font-weight: 300; color: rgba(255,255,255,.5); line-height: 1.65; }
+
+/* ── ANIMATE ── */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+.hero-left > * { animation: fadeUp .6s both; }
+.hero-eyebrow { animation-delay: .05s; }
+.hero-h1 { animation-delay: .12s; }
+.hero-sub { animation-delay: .2s; }
+.hero-cta { animation-delay: .28s; }
+.hero-stats { animation-delay: .36s; }
+
+/* ── STAFFING TABLE ── */
+.staff-table { width: 100%; border-collapse: collapse; margin-top: 36px; }
+.staff-table th { background: var(--sk-dark); color: #fff; font-size: 9px; font-weight: 700; letter-spacing: .14em; padding: 12px 16px; text-align: left; }
+.staff-table td { padding: 13px 16px; font-size: 11.5px; font-weight: 400; border-bottom: 1px solid rgba(0,0,0,.07); }
+.staff-table tr:nth-child(even) td { background: var(--off); }
+.staff-table td:first-child { font-weight: 700; }
+.td-green { color: var(--sk-green); font-weight: 700; }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: var(--sk-green); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">SKANDIA<span>.</span>MX</div>
+  <div class="nav-links">
+    <a class="nav-link" href="#situacion">Situación</a>
+    <a class="nav-link" href="#modelo">Modelo</a>
+    <a class="nav-link" href="#tiers">Niveles</a>
+    <a class="nav-link" href="#pricing">Pricing</a>
+    <a class="nav-link" href="#narrativa">Narrativa</a>
+    <a class="nav-link" href="#validacion">Validación</a>
+    <a class="nav-link" href="#financiero">Financiero</a>
+    <a class="nav-link" href="#cierre">Cierre</a>
+  </div>
+  <div class="nav-conf">CONFIDENCIAL · MAYO 2026</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">BENEFICIOS CORPORATIVOS · PROPUESTA ESTRATÉGICA MAESTRA</div>
+    <h1 class="hero-h1">
+      <span class="green">PROPUESTA</span><br>
+      ESTRATÉ<span class="outline-d">GICA</span><br>
+      <span class="green">MAESTRA</span>
+    </h1>
+    <p class="hero-sub">Seis actos. Un sistema comercial integrado. La transformación de la administración operativa a una plataforma de valor centrada en el cliente, premium, escalable y comercialmente defendible para Skandia México.</p>
+    <a class="hero-cta" href="#situacion">
+      <i class="ti ti-arrow-right"></i>
+      COMENZAR
+    </a>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">348</div>
+        <div class="stat-label">CLIENTES CORP.</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">MXN 47M</div>
+        <div class="stat-label">GAP ANUAL</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">505K</div>
+        <div class="stat-label">PARTICIPANTES</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">Fitch A–</div>
+        <div class="stat-label">POSITIVA</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-tag">CLÁSICO · POP · ESTRATEGIA</div>
+    <div class="statue-area">
+      <!-- Statue SVG: classical figure in #404040 holding a glowing green UI card -->
+      <svg class="statue-svg" viewBox="0 0 280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Plinth -->
+        <rect x="90" y="382" width="100" height="26" rx="2" fill="#2a2a2a" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
+        <rect x="96" y="358" width="88" height="28" fill="#2e2e2e" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+        <!-- Torso / Robe -->
+        <path d="M108 358 L104 280 Q102 264 110 258 L140 252 L170 258 Q178 264 176 280 L172 358 Z" fill="#363636" stroke="rgba(255,255,255,0.09)" stroke-width="0.5"/>
+        <!-- Toga drape lines -->
+        <path d="M116 320 Q130 316 140 318 Q152 316 164 320" stroke="rgba(255,255,255,0.07)" stroke-width="1" fill="none"/>
+        <path d="M112 300 Q130 295 140 297 Q152 295 168 300" stroke="rgba(255,255,255,0.07)" stroke-width="1" fill="none"/>
+        <!-- Left arm down -->
+        <path d="M104 280 Q88 276 78 270 L72 250 Q84 254 104 268 Z" fill="#323232"/>
+        <!-- Right arm raised — holding something -->
+        <path d="M176 280 Q192 268 202 248 L208 228 Q196 236 176 262 Z" fill="#303030"/>
+        <!-- Forearm raised detail -->
+        <path d="M208 228 Q218 210 214 194 L200 196 Q204 214 196 236 Z" fill="#2e2e2e"/>
+        <!-- HEAD -->
+        <ellipse cx="140" cy="228" rx="26" ry="30" fill="#383838" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+        <!-- Face detail: brow, nose, chin suggestion -->
+        <ellipse cx="133" cy="222" rx="4" ry="5" fill="#3a3a3a"/>
+        <ellipse cx="147" cy="222" rx="4" ry="5" fill="#3a3a3a"/>
+        <path d="M133 234 Q140 238 147 234" stroke="rgba(255,255,255,0.18)" stroke-width="1" fill="none"/>
+        <!-- Hair/crown shape -->
+        <path d="M116 210 Q120 194 140 192 Q160 194 164 210" fill="#353535" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
+        <!-- GLOWING UI CARD in raised hand -->
+        <g transform="translate(198, 154) rotate(-12)">
+          <rect width="68" height="50" rx="3" fill="#00C73D"/>
+          <rect x="6" y="7" width="40" height="5" rx="1.5" fill="rgba(255,255,255,0.55)"/>
+          <rect x="6" y="16" width="56" height="2" rx="1" fill="rgba(255,255,255,0.25)"/>
+          <rect x="6" y="21" width="48" height="2" rx="1" fill="rgba(255,255,255,0.25)"/>
+          <rect x="6" y="26" width="52" height="2" rx="1" fill="rgba(255,255,255,0.25)"/>
+          <rect x="6" y="35" width="26" height="9" rx="2" fill="rgba(255,255,255,0.2)"/>
+          <text x="9" y="43" font-family="Montserrat,Verdana,sans-serif" font-size="6" font-weight="700" fill="white">IMPULSO →</text>
+        </g>
+        <!-- Hand holding card -->
+        <ellipse cx="210" cy="152" rx="8" ry="5" fill="#353535"/>
+        <!-- Arm connector to card -->
+        <path d="M212 196 L210 158" stroke="#303030" stroke-width="8" stroke-linecap="round"/>
+        <!-- Left arm hand at side -->
+        <ellipse cx="72" cy="250" rx="7" ry="5" fill="#343434"/>
+      </svg>
+      <div class="pop-card pop-card-1">
+        <div class="pop-num">MXN 47M</div>
+        <div class="pop-label">GAP ANUAL A RECUPERAR</div>
+      </div>
+      <div class="pop-card pop-card-2">
+        <div class="pop-num">94%</div>
+        <div class="pop-label" style="color:rgba(255,255,255,0.75)">META DE RETENCIÓN</div>
+      </div>
+      <div class="pop-card pop-card-3">
+        <div class="pop-num">3.9×</div>
+        <div class="pop-label">ROI NIVEL GROWTH</div>
+      </div>
+      <div class="pop-bubble">LÍDERES DE MERCADO EN MÉXICO</div>
+    </div>
+  </div>
+</section>
+
+<div class="div-green"></div>
+
+<!-- SECTION 1 — SITUACIÓN -->
+<section id="situacion" class="section section-white">
+  <div class="section-label">SECCIÓN 1 — LA SITUACIÓN</div>
+  <h2 class="section-h2">La brecha entre<br>lo que <span class="green">existe</span> y<br>lo que se cobra.</h2>
+  <p class="section-body">Skandia México es el líder del mercado. 650 planes, 505,845 participantes, MXN 49.2 mil millones en activos administrados, calificación Fitch A– Positiva, y relaciones con Amazon, Google, Bimbo y CEMEX. Por cualquier métrica operativa, Skandia es sólida. Por cualquier métrica comercial, está cobrando como commodity un servicio que entrega como premium.</p>
+
+  <div class="diag-grid">
+    <div class="diag-cell dc-light">
+      <div class="diag-num">67×</div>
+      <div class="diag-title">VARIACIÓN DE PRICING</div>
+      <div class="diag-body">De 5bp a 381bp para servicios comparables. Promedio actual: 42bp. El mercado cobra 75bp. Brecha del 44% —sin ninguna justificación operativa.</div>
+    </div>
+    <div class="diag-cell dc-dark">
+      <div class="diag-num">78%</div>
+      <div class="diag-title">CLIENTES CON SERVICIO PREMIUM GRATIS</div>
+      <div class="diag-body">Seis servicios de alto valor entregados sin precio formalizado. MXN 47M anuales que se están regalando a clientes que ni siquiera lo saben.</div>
+    </div>
+    <div class="diag-cell dc-green">
+      <div class="diag-num">MXN 47M</div>
+      <div class="diag-title">GAP ANUAL RECUPERABLE</div>
+      <div class="diag-body">No es una subida de precios. Es hacer visible el valor que ya existe — y cobrarlo con disciplina, claridad y sin dañar las relaciones.</div>
+    </div>
+    <div class="diag-cell dc-off">
+      <div class="diag-num">0</div>
+      <div class="diag-title">TIERS FORMALMENTE DEFINIDOS HOY</div>
+      <div class="diag-body">La matriz actual habla en lenguaje operativo interno. Ningún cliente puede leerla en una junta de 30 minutos y entender qué está comprando.</div>
+    </div>
+  </div>
+
+  <div class="leakage-wrap">
+    <div class="l-row l-header">
+      <div class="l-cell">SERVICIO SIN PRECIO FORMAL</div>
+      <div class="l-cell">CLIENTES QUE LO RECIBEN GRATIS</div>
+      <div class="l-cell">VALOR ANUAL (MXN)</div>
+    </div>
+    <div class="l-row">
+      <div class="l-cell">Integración API de nómina</div>
+      <div class="l-cell">67 clientes (22%)</div>
+      <div class="l-cell l-val">18.2M</div>
+    </div>
+    <div class="l-row l-alt">
+      <div class="l-cell">Reportes de inversión personalizados</div>
+      <div class="l-cell">142 clientes (47%)</div>
+      <div class="l-cell l-val">10.7M</div>
+    </div>
+    <div class="l-row">
+      <div class="l-cell">Soporte ejecutivo presencial</div>
+      <div class="l-cell">31 clientes (10%)</div>
+      <div class="l-cell l-val">9.3M</div>
+    </div>
+    <div class="l-row l-alt">
+      <div class="l-cell">Sesiones de educación financiera</div>
+      <div class="l-cell">89 clientes (30%)</div>
+      <div class="l-cell l-val">4.5M</div>
+    </div>
+    <div class="l-row">
+      <div class="l-cell">Contabilidad fiduciaria (fideicomiso)</div>
+      <div class="l-cell">23 clientes (8%)</div>
+      <div class="l-cell l-val">3.1M</div>
+    </div>
+    <div class="l-row l-total">
+      <div class="l-cell" style="font-size:13px;font-weight:900;letter-spacing:.08em">TOTAL FUGA ANUAL DE VALOR</div>
+      <div class="l-cell">78% recibe ≥1 servicio gratis</div>
+      <div class="l-cell l-val" style="font-size:22px">47M</div>
+    </div>
+  </div>
+
+  <div class="callout callout-green">
+    <i class="ti ti-bulb callout-icon"></i>
+    <p class="callout-text">El diagnóstico central: Skandia construyó un servicio premium y lo cobra como commodity. La transformación no consiste en subir precios — consiste en hacer visible el valor que ya existe y cobrarlo con disciplina.</p>
+  </div>
+</section>
+
+<div class="div-dark"></div>
+
+<!-- SECTION 2 — MODELO -->
+<section id="modelo" class="section section-dark">
+  <div class="section-label">SECCIÓN 2 — EL MODELO RECOMENDADO</div>
+  <h2 class="section-h2" style="color:#fff">Plataforma<br><span class="green-accent">híbrida</span><br>asesora.</h2>
+  <p class="section-body">El modelo combina una base digital que maneja todo lo rutinario y automatizado, con una capa de inteligencia humana que se activa exactamente donde la confianza, el juicio y la presencia generan resultados distintos.</p>
+
+  <div class="two-col">
+    <div class="panel panel-dark">
+      <div class="panel-label">CAPA 1 — TODOS LOS NIVELES · BASE IDÉNTICA</div>
+      <div class="panel-h">Base digital</div>
+      <p class="panel-body">Procesa aportaciones, filing CONSAR, reportería estándar, portal, app, chatbot SAMI, notificaciones, manejo de archivos. Corre sin intervención humana. Los ejecutivos de cuenta no realizan estas tareas manualmente — eso es la trampa de margen que erosiona el 51% de utilidad que debería generar el nivel Growth.</p>
+    </div>
+    <div class="panel panel-green-solid">
+      <div class="panel-label">CAPA 2 — DIFERENCIADA POR NIVEL · EL VALOR REAL</div>
+      <div class="panel-h">Inteligencia humana</div>
+      <p class="panel-body">Se activa en gobernanza, incidentes, momentos críticos del colaborador, experiencia del empleado y transiciones de nivel. La profundidad, frecuencia y seniority del talento escalán de Core a Strategic. Esta capa es lo que el cliente paga y lo que ningún competidor puede replicar de inmediato.</p>
+    </div>
+  </div>
+
+  <div class="moment-header-row" style="margin-top:36px">
+    <div></div>
+    <div class="mh mh-core">CORE / CONFIANZA</div>
+    <div class="mh mh-growth">GROWTH / IMPULSO</div>
+    <div class="mh" style="background:rgba(0,199,61,0.15);color:var(--sk-green)">STRATEGIC / ALIANZA</div>
+  </div>
+  <div class="moment-row">
+    <div class="m-label"><i class="ti ti-cash"></i>Primer ciclo de nómina</div>
+    <div class="m-core">Email de confirmación automático</div>
+    <div class="m-growth">Ejecutivo llama antes de que HR se preocupe</div>
+    <div class="m-strategic">Socio Senior llama a CFO + HR antes del mediodía</div>
+  </div>
+  <div class="moment-row">
+    <div class="m-label"><i class="ti ti-alert-triangle" style="color:var(--sk-amber)"></i>Incidente operativo</div>
+    <div class="m-core">Resolución en 72 horas hábiles</div>
+    <div class="m-growth">Ejecutivo llama en 2 horas, actualizaciones diarias hasta resolver</div>
+    <div class="m-strategic">Socio llama en 1 hora · análisis causa raíz en 48 horas</div>
+  </div>
+  <div class="moment-row">
+    <div class="m-label"><i class="ti ti-users-group"></i>Bajas masivas</div>
+    <div class="m-core">T+1 vía portal digital</div>
+    <div class="m-growth">Ejecutivo confirma parámetros antes de procesar</div>
+    <div class="m-strategic">Socio involucrado desde la etapa de planeación previa</div>
+  </div>
+  <div class="moment-row">
+    <div class="m-label"><i class="ti ti-shield"></i>Temporada auditoría CONSAR</div>
+    <div class="m-core">Filing automático · email de confirmación</div>
+    <div class="m-growth">Ejecutivo prepara briefing específico para HR</div>
+    <div class="m-strategic">Briefing proactivo 30 días antes · Socio asiste al comité de auditoría</div>
+  </div>
+  <div class="moment-row">
+    <div class="m-label"><i class="ti ti-chart-line"></i>Comité de inversión</div>
+    <div class="m-core">Anual · resumen ejecutivo de 1 página</div>
+    <div class="m-growth">Semestral · presentación completa con benchmarks</div>
+    <div class="m-strategic">A demanda sin límite · Socio lidera con equipo de inversión Skandia</div>
+  </div>
+  <div class="moment-row">
+    <div class="m-label"><i class="ti ti-heart"></i>Pre-retiro (ventana 24 meses)</div>
+    <div class="m-core">Sin punto de contacto activo</div>
+    <div class="m-growth">Notificación digital al colaborador</div>
+    <div class="m-strategic">Sesión de asesoría individual iniciada proactivamente por Skandia</div>
+  </div>
+  <div class="moment-row">
+    <div class="m-label"><i class="ti ti-star"></i>NPS por debajo de 7</div>
+    <div class="m-core">Llamada en 1 semana</div>
+    <div class="m-growth">Ejecutivo llama en 48 horas · plan de acción en 5 días</div>
+    <div class="m-strategic">Socio llama el mismo día · escalación al CCO · plan de recuperación 48h</div>
+  </div>
+
+  <table class="staff-table" style="margin-top:48px">
+    <thead>
+      <tr>
+        <th>NIVEL</th>
+        <th>ROL DEL TALENTO</th>
+        <th>CLIENTES POR PERSONA</th>
+        <th>FTEs REQUERIDOS</th>
+        <th>MODO PRINCIPAL</th>
+        <th>SENIORITY</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Core / Confianza</td>
+        <td>Pool de operaciones compartido</td>
+        <td>40–50 clientes</td>
+        <td class="td-green">3–4 FTEs</td>
+        <td>Reactivo a incidentes únicamente</td>
+        <td>Junior–Mid (2–4 años)</td>
+      </tr>
+      <tr>
+        <td>Growth / Impulso</td>
+        <td>Ejecutivo de cuenta dedicado</td>
+        <td>15–20 clientes</td>
+        <td class="td-green">8–10 FTEs</td>
+        <td>Proactivo + reactivo · QBR trimestral</td>
+        <td>Mid–Senior (4–8 años)</td>
+      </tr>
+      <tr>
+        <td>Strategic / Alianza</td>
+        <td>Socio Cliente Senior</td>
+        <td>Máximo 3 clientes</td>
+        <td class="td-green">20–21 FTEs</td>
+        <td>Embebido / siempre disponible</td>
+        <td>Director Senior (8+ años)</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<div class="div-green"></div>
+
+<!-- SECTION 3 — TIERS -->
+<section id="tiers" class="section section-off">
+  <div class="section-label">SECCIÓN 3 — LOS TRES NIVELES</div>
+  <h2 class="section-h2">Una promesa.<br><span class="green">Tres</span> formas<br>de vivirla.</h2>
+
+  <div class="tier-grid">
+    <div class="tier-card tc-core">
+      <span class="tier-badge">CORE / CONFIANZA</span>
+      <div class="tier-bp"><span class="tier-unit">bp</span>50</div>
+      <div class="tier-name">ADMINISTRACIÓN CONFIABLE · 38% DE CLIENTES · MARGEN: −1.8%</div>
+      <p class="tier-promise">Tu plan opera bien. Todo funciona. Tu equipo tiene visibilidad. No se necesita más — no se puede pedir menos.</p>
+      <ul class="tier-features">
+        <li>Administración y cumplimiento CONSAR completos</li>
+        <li>Portal web y app móvil para empleados</li>
+        <li>Reportería mensual estándar automatizada</li>
+        <li>Pool compartido de soporte · respuesta 72 horas</li>
+        <li>Comité de inversión anual · resumen 1 página</li>
+      </ul>
+      <div class="tier-margin">DECOY DELIBERADO</div>
+    </div>
+
+    <div class="tier-card tc-growth">
+      <div class="tier-rec">MÁS ELEGIDO</div>
+      <span class="tier-badge">GROWTH / IMPULSO</span>
+      <div class="tier-bp"><span class="tier-unit">bp</span>68</div>
+      <div class="tier-name">ACTIVACIÓN DEL BENEFICIO · 44% DE CLIENTES · MARGEN: 51%</div>
+      <p class="tier-promise">Tus colaboradores entienden y usan su beneficio. HR recibe apoyo real. El plan deja de ser invisible — y eso se nota en retención.</p>
+      <ul class="tier-features">
+        <li>Todo lo de Core, más lo que sigue:</li>
+        <li>Ejecutivo dedicado · SLA 24 horas hábiles</li>
+        <li>Integración API de nómina (MXN 58K/año ahorrado)</li>
+        <li>4 sesiones de educación financiera por año</li>
+        <li>Analítica trimestral + comités de inversión semestrales</li>
+        <li>Contabilidad fiduciaria con conciliación trimestral</li>
+      </ul>
+      <div class="tier-margin" style="color:var(--sk-green)">ROI CLIENTE: 3.9×</div>
+    </div>
+
+    <div class="tier-card tc-strategic">
+      <div class="tier-pop">ALIANZA<br>REAL</div>
+      <span class="tier-badge">STRATEGIC / ALIANZA</span>
+      <div class="tier-bp"><span class="tier-unit">bp</span>88</div>
+      <div class="tier-name">ALIANZA ESTRATÉGICA · 18% DE CLIENTES · MARGEN: 79%</div>
+      <p class="tier-promise">Skandia es parte de cómo tu empresa atrae, retiene y reconoce a su gente. Esto no es un contrato de servicio. Es una alianza.</p>
+      <ul class="tier-features">
+        <li>Todo lo de Growth, y además:</li>
+        <li>Socio Senior dedicado · máximo 3 clientes por socio</li>
+        <li>Alineación ejecutiva mensual + comités a demanda</li>
+        <li>Analítica predictiva con IA para HR</li>
+        <li>Acompañamiento individual en pre-retiro (24 meses)</li>
+        <li>Motor B2B2C: PPR, seguros, ahorro para colaboradores</li>
+        <li>Garantía de desempeño disponible (+5bp)</li>
+      </ul>
+      <div class="tier-margin" style="color:rgba(255,255,255,0.4)">MARGEN: 79%</div>
+    </div>
+  </div>
+
+  <div class="callout callout-dark">
+    <i class="ti ti-lock callout-icon"></i>
+    <p class="callout-text">Regla de asignación obligatoria: AUM &gt; MXN 80M = mínimo nivel Growth, sin excepción sin autorización del CFO. La primera excepción no autorizada destruye toda la arquitectura de precios. El Comité de Pricing aprueba cada desvío — y registra cada uno.</p>
+  </div>
+</section>
+
+<div class="div-amber" style="height:3px"></div>
+
+<!-- SECTION 4 — PRICING -->
+<section id="pricing" class="section section-dark">
+  <div class="section-label">SECCIÓN 4 — PRICING Y ALINEACIÓN COMERCIAL</div>
+  <h2 class="section-h2" style="color:#fff">Lo que el cliente<br><span class="green-accent">realmente</span><br>compra.</h2>
+  <p class="section-body">No es "administración de pensiones". El cliente compra cuatro cosas, en este orden de prioridad emocional — y cada una justifica un tier distinto.</p>
+
+  <div class="motives-grid">
+    <div class="motive m-green">
+      <div class="m-big">01</div>
+      <div class="m-title">Libertad de responsabilidad legal</div>
+      <p class="m-body">El derecho a dormir tranquilo, sabiendo que CONSAR está atendido, el fideicomiso correctamente estructurado y la exposición de auditoría completamente cubierta. Esto se compra en todos los niveles — pero con distinta profundidad de protección.</p>
+    </div>
+    <div class="motive m-dark">
+      <div class="m-big">02</div>
+      <div class="m-title">Ausencia de fricción operativa</div>
+      <p class="m-body">El plan corre invisible y sin que HR tenga que perseguir a nadie. Cero soporte reactivo no planificado. Ningún reporte que hay que recordar pedir. El beneficio simplemente funciona — y eso es más valioso de lo que parece.</p>
+    </div>
+    <div class="motive m-dark">
+      <div class="m-big">03</div>
+      <div class="m-title">Prueba de que el beneficio funciona</div>
+      <p class="m-body">Datos, analítica y métricas que justifican la existencia del plan en la revisión anual de presupuesto ante el CFO. Sin esto, el plan es un costo invisible. Con esto, el plan es una inversión con ROI documentado.</p>
+    </div>
+    <div class="motive m-green">
+      <div class="m-big">04</div>
+      <div class="m-title">Una relación que los hace lucir bien</div>
+      <p class="m-body">El director de HR que puede referenciar a Skandia como un diferenciador de talento — no como un checkbox de cumplimiento. La alianza con Skandia eleva su posición interna como arquitecto del bienestar financiero de la gente.</p>
+    </div>
+  </div>
+
+  <div class="formula-box">
+    <div class="formula-label">FÓRMULA MAESTRA DE PRICING POR VALOR</div>
+    <div class="formula-text">
+      Precio = Valor creado para el cliente × Tasa de captura (25–40%)<br>
+      <span>El cliente retiene el 60–75% como beneficio neto. Skandia captura el 25–40%. Esta estructura es justa, defendible y elimina la objeción "solo están subiendo precios".</span>
+    </div>
+  </div>
+
+  <div class="principles-strip">
+    <div class="principle p-green">
+      <div class="p-num">PRINCIPIO 01</div>
+      <div class="p-title">Primero el valor, nunca el precio</div>
+      <p class="p-body">La calculadora de ROI aparece antes que la tarifa, siempre. Orden: qué recibes → cuánto vale → cuánto cuesta.</p>
+    </div>
+    <div class="principle p-light">
+      <div class="p-num">PRINCIPIO 02</div>
+      <div class="p-title">Ancla alto, recomienda el centro</div>
+      <p class="p-body">Strategic primero (88bp). Luego Growth como la elección racional. Core como la base. Growth se siente descuento, no upgrade.</p>
+    </div>
+    <div class="principle p-light">
+      <div class="p-num">PRINCIPIO 03</div>
+      <div class="p-title">Por empleado, por mes</div>
+      <p class="p-body">"MXN 71/empleado/mes" es una conversación radicalmente distinta a "68bp anual". Mismo número. Otra percepción.</p>
+    </div>
+    <div class="principle p-light">
+      <div class="p-num">PRINCIPIO 04</div>
+      <div class="p-title">El costo de no actuar es mayor</div>
+      <p class="p-body">Sin fideicomiso: exposición de MXN 5–50M. Sin API: MXN 890K/año en fricción de HR. Eso es el precio real del status quo.</p>
+    </div>
+    <div class="principle p-amber">
+      <div class="p-num">PRINCIPIO 05</div>
+      <div class="p-title">El gobierno es la integridad del precio</div>
+      <p class="p-body">Todo descuento: Comité de Pricing. La primera excepción sienta precedente. "No" es la respuesta por defecto.</p>
+    </div>
+  </div>
+</section>
+
+<div class="div-green"></div>
+
+<!-- SECTION 5 — NARRATIVA -->
+<section id="narrativa" class="section section-white">
+  <div class="section-label">SECCIÓN 5 — LA NARRATIVA DEL CLIENTE</div>
+  <h2 class="section-h2">Del lenguaje<br><span class="green">operativo</span> a la<br>promesa humana.</h2>
+  <p class="section-body">Una propuesta sofisticada no es la que usa palabras difíciles — es la que logra que el cliente entienda algo complejo con claridad, con calidez, con la certeza de que alguien lo tiene bajo control.</p>
+
+  <div class="narrative-block">
+    <p class="narrative-text">
+      Toda empresa hace una promesa a su gente. No con palabras — con los beneficios que pone en marcha. Con el plan de ahorro que dice: <strong>vemos tu futuro, no solo tu presente.</strong> Con la pensión que dice: cuando tu tiempo aquí termine, saldrás con más de lo que llegaste.<br><br>
+      Esa promesa es fácil de hacer. Es más difícil mantenerla con consistencia, claridad y la presencia que hace que un colaborador sienta que el beneficio es real — no solo una línea en su contrato.<br><br>
+      <strong>Skandia existe para que las empresas cumplan esa promesa.</strong>
+    </p>
+    <div class="narrative-author">NARRATIVA MAESTRA · SKANDIA MÉXICO · BENEFICIOS CORPORATIVOS · 2026</div>
+  </div>
+
+  <div class="audience-grid">
+    <div class="aud-card">
+      <i class="ti ti-building-skyscraper aud-icon"></i>
+      <div class="aud-title">CEO / CONSEJO</div>
+      <div class="aud-role">IMPACTO ESTRATÉGICO Y REPUTACIONAL</div>
+      <p class="aud-body">"Skandia se asegura de que tu compromiso con tu gente se cumpla — no solo técnicamente, sino de una forma que ellos sienten. Eso protege tu reputación, tu posición regulatoria y tu estrategia de retención de talento."</p>
+    </div>
+    <div class="aud-card alt">
+      <i class="ti ti-coin aud-icon"></i>
+      <div class="aud-title">CFO / ADQUISICIONES</div>
+      <div class="aud-role">ROI DOCUMENTADO · PRECIO JUSTO DE MERCADO</div>
+      <p class="aud-body">"Para tus 500 colaboradores: MXN 332K en valor anual documentado. MXN 68K de inversión incremental. Retorno de 3.9×. Reproducible y verificable con tus propios datos — no con los nuestros."</p>
+    </div>
+    <div class="aud-card alt">
+      <i class="ti ti-users aud-icon"></i>
+      <div class="aud-title">DIRECTOR DE RECURSOS HUMANOS</div>
+      <div class="aud-role">MENOS FRICCIÓN · MÁS VISIBILIDAD · APOYO REAL</div>
+      <p class="aud-body">"Dejas de administrar la pensión. Empiezas a gestionar la estrategia alrededor de ella. Tu ejecutivo dedicado maneja todo lo operativo. Tú llegas al comité con insights, no con disculpas."</p>
+    </div>
+    <div class="aud-card">
+      <i class="ti ti-speakerphone aud-icon"></i>
+      <div class="aud-title">EQUIPO COMERCIAL DE SKANDIA</div>
+      <div class="aud-role">APERTURA DE CONVERSACIÓN · DEFENSA DE VALOR</div>
+      <p class="aud-body">"Antes de mostrarte cualquier cosa, cuéntame: ¿qué es lo que te gustaría que fuera diferente en tu plan de pensiones hoy?" — escucha primero, elige la narrativa después. La conversación siempre empieza con la realidad del cliente.</p>
+    </div>
+  </div>
+
+  <h3 class="section-h3" style="margin-top:56px">Lo que nunca<br>debes decirle al cliente.</h3>
+  <p class="section-body" style="margin-bottom:12px">El glosario completo: cada término interno que debe desaparecer de las conversaciones comerciales — y la promesa visible que lo reemplaza.</p>
+
+  <div class="jargon-grid">
+    <div class="j-old">Envío de layouts / EasyCorp / SFTP</div>
+    <div class="j-new"><i class="ti ti-arrow-right"></i>Tu nómina se conecta directo a nuestro sistema — sin archivos manuales, sin errores de conciliación</div>
+    <div class="j-old">Aplicación T / T+1</div>
+    <div class="j-new"><i class="ti ti-arrow-right"></i>Se aplica el mismo día hábil / se aplica al siguiente día hábil</div>
+    <div class="j-old">Ejecutivo de cuenta</div>
+    <div class="j-new"><i class="ti ti-arrow-right"></i>Tu ejecutivo dedicado de Skandia — disponible directamente, máximo 20 clientes</div>
+    <div class="j-old">Comité de inversión (one pager)</div>
+    <div class="j-new"><i class="ti ti-arrow-right"></i>Nos reunimos contigo para revisar cómo rinde el ahorro de tu gente y qué recomendamos hacer</div>
+    <div class="j-old">Bajas masivas / layout bajas</div>
+    <div class="j-new"><i class="ti ti-arrow-right"></i>Cuando un colaborador sale de la empresa, lo procesamos el mismo día con asesoría ejecutiva</div>
+    <div class="j-old">Customer Journey / Activaciones</div>
+    <div class="j-new"><i class="ti ti-arrow-right"></i>Campañas que ayudan a tu gente a usar y valorar de verdad el beneficio que construiste</div>
+    <div class="j-old">Record keeping / parametrización</div>
+    <div class="j-new"><i class="ti ti-arrow-right"></i>Administramos los registros del plan y lo configuramos a la medida exacta de tu empresa</div>
+    <div class="j-old">Subcuentas / tipos de aportación</div>
+    <div class="j-new"><i class="ti ti-arrow-right"></i>Tus empleados pueden ahorrar de formas distintas dentro del mismo plan, según su perfil</div>
+  </div>
+</section>
+
+<div class="div-dark"></div>
+
+<!-- SECTION 6 — VALIDACIÓN -->
+<section id="validacion" class="section section-dark">
+  <div class="section-label">SECCIÓN 6 — EL PLAN DE VALIDACIÓN</div>
+  <h2 class="section-h2" style="color:#fff">Cuatro fases.<br>Un criterio<br><span class="green-accent">pre-comprometido.</span></h2>
+  <p class="section-body">La validación no sirve para confirmar que la propuesta es correcta — sirve para descubrir qué hay que ajustar antes de escalar. Mide conductas observables, no opiniones generales ni reacciones superficiales.</p>
+
+  <div class="timeline">
+    <div class="tl-step">
+      <div class="tl-num">FASE 01 · SEM. 1–3</div>
+      <div class="tl-title">Alineación interna</div>
+      <div class="tl-body">Core team + todos los ejecutivos de cuenta + ops + legal + producto. Nadie habla con un cliente antes de certificarse.</div>
+      <div class="tl-gate">CRITERIO: 90%+ certificación · 0 ambigüedades en la matriz de servicio</div>
+    </div>
+    <div class="tl-step tl-active">
+      <div class="tl-num">FASE 02 · SEM. 4–8</div>
+      <div class="tl-title">Prueba A/B con el equipo de ventas</div>
+      <div class="tl-body">Grupo A: approach actual sin cambios. Grupo B: nuevo modelo completo. 10 prospectos cada uno. Se mide velocidad, confianza, objeciones y avance.</div>
+      <div class="tl-gate">CRITERIO: ≥30% menos objeciones tempranas de precio en Grupo B</div>
+    </div>
+    <div class="tl-step">
+      <div class="tl-num">FASE 03 · SEM. 7–11</div>
+      <div class="tl-title">Testing con clientes HR</div>
+      <div class="tl-body">8–10 clientes HR amigos o prospectos tibios. Prueba de comprensión, preferencia de tier, Van Westendorp, auditoría de lenguaje.</div>
+      <div class="tl-gate">CRITERIO: Precio "justo" Growth entre 60–75bp por Van Westendorp</div>
+    </div>
+    <div class="tl-step">
+      <div class="tl-num">FASE 04 · SEM. 10–18</div>
+      <div class="tl-title">Piloto de mercado real</div>
+      <div class="tl-body">5 nuevos prospectos: 2 Core, 2 Growth, 1 Strategic. Nunca clientes existentes — sus expectativas históricas contaminan el resultado y hacen inútil el aprendizaje.</div>
+      <div class="tl-gate">CRITERIO GO: 4 de 5 aceptan el tier recomendado al precio publicado</div>
+    </div>
+  </div>
+
+  <div class="callout callout-amber" style="margin-top:36px">
+    <i class="ti ti-alert-triangle callout-icon"></i>
+    <div>
+      <div style="font-size:9px;font-weight:700;letter-spacing:.18em;color:var(--sk-amber);margin-bottom:8px">COMPROMISO DEL CEO — PRE-ACORDADO POR ESCRITO ANTES DEL PILOTO</div>
+      <p class="callout-text" style="color:var(--sk-dark);font-size:13px">4 de 5 pilotos aceptan → AVANZAR a implementación completa · 3 de 5 aceptan → PAUSA, análisis de causa raíz, corrección, 3 pilotos más · 2 o menos → ALTO TOTAL, regresar a Fase 2 o 3.<br><br>"Ya nos comprometimos" no es razón para continuar. El CEO se compromete, por escrito, a que los datos preceden a la emoción en cada decisión de implementación. Ignorar una señal de no-avance garantiza capturar MXN 17M en vez de MXN 42.5M.</p>
+    </div>
+  </div>
+</section>
+
+<div class="div-green"></div>
+
+<!-- SECTION 7 — FINANCIERO -->
+<section id="financiero" class="section section-white">
+  <div class="section-label">SECCIÓN 7 — PROYECCIONES FINANCIERAS</div>
+  <h2 class="section-h2">Los números<br>que justifican<br><span class="green">el cambio.</span></h2>
+
+  <div class="fin-grid">
+    <div class="fin-card">
+      <div class="fin-horizon">30 DÍAS · FUNDACIÓN</div>
+      <div class="fin-amount" style="font-size:28px">Base</div>
+      <p class="fin-desc">CEO comprometido · Comité de Pricing activo · Auditoría completa de 348 clientes · Catálogo de niveles v1.0 publicado con sign-off de Operaciones</p>
+    </div>
+    <div class="fin-card">
+      <div class="fin-horizon">90 DÍAS · PRUEBA DE CONCEPTO</div>
+      <div class="fin-amount">2.8M</div>
+      <p class="fin-desc">Ventas certificadas · Calculadora ROI validada · Grupo A migrado (63 clientes, carta CEO) · Debrief del piloto · Decisión GO/NO-GO documentada</p>
+    </div>
+    <div class="fin-card fin-highlight">
+      <div class="fin-horizon">6 MESES · IMPULSO</div>
+      <div class="fin-amount">14M+</div>
+      <p class="fin-desc">Grupo B lanzado (217 clientes) · Nuevos clientes en pricing por valor desde el día uno · Portal y plataforma de participantes en actualización activa</p>
+    </div>
+    <div class="fin-card">
+      <div class="fin-horizon">12 MESES · TRANSFORMACIÓN</div>
+      <div class="fin-amount">35–42M</div>
+      <p class="fin-desc">Grupos A–C migrados · Pricing por valor establecido como el estándar del negocio · Hoja de ruta de plataforma digital validada · 94% retención alcanzada</p>
+    </div>
+    <div class="fin-card">
+      <div class="fin-horizon">18–24 MESES · LIDERAZGO</div>
+      <div class="fin-amount">47M+</div>
+      <p class="fin-desc">Grupo D completo (CEO lidera) · Motor B2B2C activo · Pricing por resultados disponible en Alianza · Skandia como líder premium del mercado mexicano</p>
+    </div>
+    <div class="fin-card" style="background:var(--light)">
+      <div class="fin-horizon">MODELO PROYECTADO POR NIVEL</div>
+      <div class="fin-amount" style="font-size:24px;margin-bottom:20px">MXN 57.5M</div>
+      <div style="font-size:11px;line-height:2.1;color:#555">
+        <strong style="color:var(--sk-dark)">Core:</strong> 132 clientes · 50bp · MXN 9.4M · margen −1.8%<br>
+        <strong style="color:var(--sk-green)">Growth:</strong> 153 clientes · 68bp · MXN 28.2M · margen 51%<br>
+        <strong style="color:var(--sk-dark)">Strategic:</strong> 63 clientes · 88bp · MXN 19.9M · margen 79%<br>
+        <strong>Blended:</strong> ~52% de margen bruto total
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="div-dark"></div>
+
+<!-- SECTION 8 — CIERRE -->
+<section id="cierre" class="closing">
+  <div>
+    <div class="section-label" style="color:rgba(255,255,255,0.5)">SECCIÓN 8 — LO QUE EL EQUIPO DECIDE HOY</div>
+    <h2 class="closing-h">
+      La<br>
+      <span class="outline-w">OPOR</span><br>
+      TUNIDAD<br>
+      <span class="outline-w">ES</span> AHORA.
+    </h2>
+    <ul class="closing-checks">
+      <li><i class="ti ti-check"></i>La dirección estratégica: de matriz operativa a plataforma de valor centrada en el cliente.</li>
+      <li><i class="ti ti-check"></i>El modelo recomendado: Plataforma Híbrida Asesora con niveles Core / Growth / Strategic como arquitectura principal.</li>
+      <li><i class="ti ti-check"></i>La filosofía comercial: pricing por valor, niveles transparentes, disciplina de gobierno y cero primeras excepciones no autorizadas.</li>
+      <li><i class="ti ti-check"></i>El compromiso de validación: cuatro fases, criterios de avance predefinidos, y el CEO comprometido por escrito a que los datos preceden a la emoción.</li>
+    </ul>
+  </div>
+  <div class="closing-right">
+    <div class="closing-body">
+      <p class="closing-body-text">Skandia ya tiene todo lo que necesita para hacer esta transformación. La capacidad de servicio, las relaciones con clientes, el conocimiento institucional de 25 años, la base de 505,845 participantes. Lo que cambia hoy es la intencionalidad — la decisión de hacer todo eso visible, cobrable y comercialmente defendible. La oportunidad es real. El momento es ahora. El equipo está listo.</p>
+    </div>
+    <a class="big-cta" href="#situacion">
+      <i class="ti ti-arrow-right"></i>
+      REVISAR DESDE EL PRINCIPIO
+    </a>
+    <div class="closing-fact">
+      <div class="closing-fact-num">505,845</div>
+      <div class="closing-fact-label">MEXICANOS CON SU RETIRO EN MANOS DE SKANDIA. ESA ES LA PROMESA QUE DEBEMOS CUMPLIR — CON EXCELENCIA, CON PRECIO JUSTO, Y CON ORGULLO.</div>
+    </div>
+    <div style="background:rgba(0,0,0,0.15);padding:18px 22px">
+      <div style="font-size:9px;font-weight:700;letter-spacing:.18em;color:rgba(255,255,255,.4);margin-bottom:8px">PRÓXIMOS 30 DÍAS — LO MÁS URGENTE</div>
+      <div style="font-size:11px;font-weight:600;color:#fff;line-height:2">
+        P0 · Sem 1: Compromiso CEO (escrito + video) → toda la organización<br>
+        P0 · Sem 2: Comité de Pricing formado con estatuto y cadencia quincenal<br>
+        P0 · Sem 3–4: Auditoría de servicio 100% — qué recibe cada uno de los 348<br>
+        P0 · Sem 4: Catálogo de niveles v1.0 publicado con sign-off de Operaciones<br>
+        P1 · Sem 6: Equipo comercial certificado antes de cualquier conversación piloto<br>
+        P2 · Sem 8: Grupo A lanzado — 63 clientes, carta del CEO, seguimiento en CRM
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-logo">SKANDIA<span>.</span>MX</div>
+  <div class="footer-info">DIRECCIÓN DE CLIENTE Y ESTRATEGIA · BENEFICIOS CORPORATIVOS · MAYO 2026</div>
+  <div class="footer-conf">CONFIDENCIAL</div>
+</footer>
+
+<script>
+// Active nav link on scroll
+const sections = document.querySelectorAll('section[id], .closing[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const match = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+      if (match) match.classList.add('active');
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+sections.forEach(s => observer.observe(s));
+
+// Tier card keyboard nav
+document.querySelectorAll('.tier-card').forEach(card => {
+  card.setAttribute('tabindex', '0');
+  card.addEventListener('keydown', e => { if (e.key === 'Enter') card.click(); });
+});
+</script>
+</body>
+</html>
